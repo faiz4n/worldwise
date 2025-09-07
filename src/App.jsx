@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import AppLayout from "./pages/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
+import CityList from "./components/cityList";
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,7 +15,7 @@ export default function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/login" element={<Login />} />
         <Route path="app" element={<AppLayout />}>
-          <Route index element={<p>List of cities</p>} />
+          <Route index element={<CityList />} />
           <Route path="cities" element={<p>This is cities section</p>} />
           <Route path="countries" element={<p>This is countries section</p>} />
           <Route path="about" element={<p>This is about section</p>} />
